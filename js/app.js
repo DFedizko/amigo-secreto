@@ -6,12 +6,12 @@ function adicionar() {
     if (nomeAmigo == '') {
         alert('Coloque um nome válido!');
         return;
-    } else if (listaAmigos.includes(nomeAmigo)) {
+    } else if (listaAmigos.includes(nomeAmigo.toUpperCase())) {
         alert('Nome repetido, coloque um outro nome!');
         return;
     }
 
-    listaAmigos.push(nomeAmigo);
+    listaAmigos.push(nomeAmigo.toUpperCase());
     document.getElementById('lista-amigos').textContent = listaAmigos.join(', ');
 
     document.getElementById('nome-amigo').value = '';
